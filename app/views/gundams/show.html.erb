@@ -1,0 +1,27 @@
+<div class="intoro">
+  <h5>診断結果</h5>
+  <p>あなたにおすすめのガンプラは</p>
+</div>
+<div class="gundam-container">
+ <% if @result[:grade] == :hg %>
+ <p>1/144サイズHG（ハイグレード）です！<p>
+ <% end %>
+
+ <% if @result[:grade] == :mg %>
+ <p>1/100サイズMG（マスターグレード）です！<p>
+ <% end %>
+
+ <% if @result[:grade] == :rg %>
+ <p>1/144サイズRG（リアルグレード）です！<p>
+ <% end %>
+
+ <% if @result[:grade] == :eg %>
+ <p>1/144サイズEG（エントリーグレード）です！<p>
+ <% end %>
+
+</div>
+
+<div>
+<%= link_to 'トップページ', gundams_path %>
+<%= link_to '他の結果を見てみる', others_path %>
+</div>

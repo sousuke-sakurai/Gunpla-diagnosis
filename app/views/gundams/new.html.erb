@@ -1,0 +1,101 @@
+<%= form_for(@gundam, class: 'form-horizontal', role: 'form') do |f| %>
+    <div class="gunpla-container">
+        <div class="col-12">
+            <p>Q1. 1000ピースの真っ白なジグソーパズルをプレゼントされたら?</p>
+        </div>
+        <div class="col-6">
+            <%= f.radio_button :question1, "1", id: "custom_id1" %>
+            <label for="custom_id1">週末に徹夜してでも一気に完成させる</label>
+            <%= f.radio_button :question1, "2", id: "custom_id2" %>
+            <label for="custom_id2">毎日寝る前に少しずつ進める</label>
+            <%= f.radio_button :question1, "3", id: "custom_id3" %>
+            <label for="custom_id2">そっと箱を閉じて見なかったことにする</label>
+        </div>
+        <div class="col-12">
+            <p>Q2. 休日のお昼、カレーを食べるなら？</p>
+        </div> 
+        <div class="col-6">
+            <%= f.radio_button :question2, "1", id: "custom_id3" %>
+            <label for="custom_id3">手早く作れる市販のルーでサッと済ませる</label>
+            <%= f.radio_button :question2, "2", id: "custom_id4" %>
+            <label for="custom_id4">スパイスの調合や、お肉を何時間も煮込むところから始める</label>
+        </div>   
+    
+        <div class="col-12">
+            <p>Q3. 新しいデジタル家電を買ったとき、説明書はどうする</p>
+        </div>
+        <div class="col-6">
+            <%= f.radio_button :question4, "1", id: "custom_id7" %>
+            <label for="custom_id7">まずは隅から隅まで熟読してから触る</label>
+            <%= f.radio_button :question4, "2", id: "custom_id8" %>
+            <label for="custom_id8">とりあえず直感でボタンを押しながら覚える</label>
+        </div>
+
+        
+        <div class="col-12">
+            <p>Q4. 時計や機械の裏側（スケルトン構造など）を見ると…？</p>
+        </div>
+        <div class="col-6">
+            <%= f.radio_button :question5, "1", id: "custom_id9" %>
+            <label for="custom_id7">歯車がどう噛み合っているのか、構造の仕組みを知りたくなる</label>
+            <%= f.radio_button :question5, "2", id: "custom_id10" %>
+            <label for="custom_id8">構造よりも、全体のデザインの美しさに惹かれる</label>
+        </div>
+
+        <div class="col-12">
+            <p>Q5. 料理で一番「ここは譲れない」と思うポイントは？</p>
+        </div>
+        <div class="col-6">
+            <%= f.radio_button :question6, "1", id: "custom_id11" %>
+            <label for="custom_id7">味付けの正確さ・レシピ通りであること</label>
+            <%= f.radio_button :question6, "2", id: "custom_id12" %>
+            <label for="custom_id8">食材の下ごしらえや、見えない部分の仕込み</label>
+        </div>
+
+        <div class="col-12">
+            <p>Q6. 自分へのご褒美にファッションアイテムを買うなら？</p>
+        </div>
+        <div class="col-6">
+            <%= f.radio_button :question7, "1", id: "custom_id13" %>
+            <label for="custom_id7">トレンドを取り入れた、パッと目を引く派手なデザインの服</label>
+            <%= f.radio_button :question7, "2", id: "custom_id14" %>
+            <label for="custom_id8">職人がこだわって作った、長く使い込んで味が出るデニムや革靴</label>
+        </div>
+
+        <div class="col-12">
+            <p>Q7. 美術館や展示会に行ったとき、つい目で追ってしまうのは</p>
+        </div>
+        <div class="col-6">
+            <%= f.radio_button :question8, "1", id: "custom_id15" %>
+            <label for="custom_id7">作品が持つストーリーや、全体の迫力</label>
+            <%= f.radio_button :question8, "2", id: "custom_id16" %>
+            <label for="custom_id8">使われている素材の質感や、光が当たったときの反射の美しさ</label>
+        </div>
+
+        <div class="col-12">
+            <p>Q8. RPGのゲームをプレイしているときのあなたは？</p>
+        </div>
+        <div class="col-6">
+            <%= f.radio_button :question9, "1", id: "custom_id7" %>
+            <label for="custom_id7">とにかくメインストーリーを一直線に進めてクリアを目指す</label>
+            <%= f.radio_button :question9, "2", id: "custom_id8" %>
+            <label for="custom_id8">サブクエストや隠しアイテムを隅々までコンプリートする</label>
+            <%= f.radio_button :question9, "3", id: "custom_id8" %>
+            <label for="custom_id8">キャラクターの装備の見た目にこだわり、スクショ撮影に時間を溶かす</label>
+        </div>
+
+        <div class="col-12">
+            <p>Q9. 部屋のインテリアで一番テンションが上がる瞬間は？</p>
+        </div>
+        <div class="col-6">
+            <%= f.radio_button :question10, "1", id: "custom_id7" %>
+            <label for="custom_id7">部屋全体がスッキリと片付いて広く見えたとき</label>
+            <%= f.radio_button :question1, "2", id: "custom_id8" %>
+            <label for="custom_id8">間接照明などで、部屋にドラマチックなムードが作れたとき</label>
+        </div>
+
+    </div>
+    <div class="sindanbotan">
+        <%= f.submit " 結果 " %>
+    </div>
+<% end %>

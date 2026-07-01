@@ -1,0 +1,10 @@
+<div>
+<%= link_to 'トップページ', gundams_path %>
+</div>
+
+<% if @gundam.image.attached? %>
+  <div class="gundam-image">
+    <%= image_tag @gundam.image, size: '500x400' %>
+  </div>
+<% end %>
+
