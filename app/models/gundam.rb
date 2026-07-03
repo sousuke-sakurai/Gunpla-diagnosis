@@ -48,14 +48,14 @@ class Gundam < ApplicationRecord
 
      case question5
     when '1'
-      grade_scores[:sugumi] += 3
-      grade_scores[:sumiire] += 0
-      grade_scores[:paint] += 0
+      style_scores[:sugumi] += 3
+      style_scores[:sumiire] += 0
+      style_scores[:paint] += 0
       style_scores[:photo] += 1
     when '2'
-      grade_scores[:sugimi] += 0
-      grade_scores[:sumiire] += 3
-      grade_scores[:paint] += 2
+      style_scores[:sugumi] += 0
+      style_scores[:sumiire] += 3
+      style_scores[:paint] += 2
       style_scores[:photo] += 1  
     end
 
@@ -63,11 +63,11 @@ class Gundam < ApplicationRecord
     when '1'
       style_scores[:sumiire] += 2
       style_scores[:photo] += 0
-      style_scores[:sugimi] += 0
+      style_scores[:sugumi] += 0
       style_scores[:paint] += 3
     when '2'
       style_scores[:sumiire] += 3 
-      style_scores[:phpto] += 0
+      style_scores[:photo] += 0
       style_scores[:sugumi] += 0
       style_scores[:paint] += 2
     end
@@ -87,7 +87,7 @@ class Gundam < ApplicationRecord
       
      case question8
     when '1'
-      style_scores[:sugimi] += 3  
+      style_scores[:sugumi] += 3  
       style_scores[:sumiire] += 0
       style_scores[:photo] += 0
       style_scores[:paint] += 0
@@ -97,7 +97,7 @@ class Gundam < ApplicationRecord
       style_scores[:photo] += 1
       style_scores[:paint] += 2
     when '3'
-      style_scores[:sugimi] += 0
+      style_scores[:sugumi] += 0
       style_scores[:sumiire] += 2
       style_scores[:photo] += 3
       style_scores[:paint] += 3
@@ -105,12 +105,12 @@ class Gundam < ApplicationRecord
 
      case question9
     when '1'
-      style_scores[:sugimi] += 2
+      style_scores[:sugumi] += 2
       style_scores[:sumiire] += 0
       style_scores[:photo] += 0
       style_scores[:paint] += 0
     when '3'
-      style_scores[:sugimi] += 0
+      style_scores[:sugumi] += 0
       style_scores[:sumiire] += 0
       style_scores[:photo] += 3
       style_scores[:paint] += 2
