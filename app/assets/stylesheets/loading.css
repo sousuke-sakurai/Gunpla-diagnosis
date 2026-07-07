@@ -1,0 +1,26 @@
+/* ロード画面を画面いっぱいに広げて固定する（前回と同じ） */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff; /* サイトの背景色に合わせる */
+  display: flex;
+  justify-content: center; /* 左右の中央揃え */
+  align-items: center;     /* 上下の中央揃え */
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
+
+/* JSで付与されるフェードアウト用のクラス（前回と同じ） */
+#loading-screen.loaded {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* GIF画像のサイズ調整（必要に応じて） */
+.loading-gif {
+  width: 150px; /* お好みのサイズに調整してください */
+  height: auto;
+}
