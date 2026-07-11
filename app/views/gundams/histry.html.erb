@@ -1,1 +1,80 @@
-<%= link_to 'トップページ', gundams_path %>
+<body>
+  
+  <header class="custom-header">
+    <div class="header-logo"><a href="#">Ideal GUNPLA</a></div>
+    <nav class="header-nav">
+      <ul>
+       
+      </ul>
+    </nav>
+  </header>
+
+  <div class="history-container">
+    <h1 class="page-title">HISTORY <span>ガンプラの歴史</span></h1>
+
+    <!-- 🌟1画面に収まるタイムライン🌟 -->
+    <div class="timeline-wrapper">
+      <div class="timeline">
+        
+        <!-- 1980 -->
+        <div class="timeline-item top">
+          <div class="content">
+            <%= image_tag "1980.jpg", alt: "1990年の画像", class: "history-image-placeholder" %>            
+            <p class="history-text">記念すべき最初の「1/144 ガンダム」が発売。当時の価格は300円で、社会現象を巻き起こした。</p>
+            <h2 class="year-title">1980<span>昭和55年</span></h2>
+          </div>
+        </div>
+
+        <!-- 1990 -->
+        <div class="timeline-item bottom">
+          <div class="content">
+           <h2 class="year-title">1990<span>平成2年</span></h2>
+            <p class="history-text">ガンプラ10周年。「ハイグレード（HG）」誕生。多色成形やスナップフィットで組み立てやすさが向上。</p>
+             <%= image_tag "1990.jpg", alt: "1990年の画像", class: "history-image-placeholder" %>
+          </div>
+        </div>
+
+        <!-- 1995 -->
+        <div class="timeline-item top">
+          <div class="content">
+            <%= image_tag "1995.jpg", alt: "1995年の画像", class: "history-image-placeholder" %>  
+            <p class="history-text">「マスターグレード（MG）」スタート。内部フレームの再現と圧倒的なディテールで大人のホビーに。</p>
+            <h2 class="year-title">1995<span>平成7年</span></h2>
+          </div>
+        </div>
+
+        <!-- 1998 -->
+        <div class="timeline-item bottom">
+          <div class="content">
+            <h2 class="year-title">1998<span>平成10年</span></h2>
+            <p class="history-text">「パーフェクトグレード（PG）」誕生。最高峰の技術が注ぎ込まれ、究極の可動と発光ギミックを実現。</p>
+            <%= image_tag "1998.jpg", alt: "1998年の画像", class: "history-image-placeholder" %>   
+          </div>
+        </div>
+
+        <!-- 2010 -->
+        <div class="timeline-item top">
+          <div class="content">
+            <%= image_tag "2010.jpg", alt: "2010年の画像", class: "history-image-placeholder" %>  
+            <p class="history-text">「リアルグレード（RG）」誕生。1/144スケールにMG並みの技術を凝縮し、リアルを追求。</p>
+            <h2 class="year-title">2010<span>平成22年</span></h2>
+          </div>
+        </div>
+
+        <!-- 2020 -->
+        <div class="timeline-item bottom">
+          <div class="content">
+            <h2 class="year-title">2020<span>令和2年</span></h2>
+            <p class="history-text">ガンプラ40周年。可動域の極限を追求したEGの登場や、環境に配慮した新素材の採用など進化は止まらない。</p>
+            <%= image_tag "2020.jpg", alt: "2020年の画像", class: "history-image-placeholder" %>   
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+

@@ -1,0 +1,145 @@
+/* =========================================
+   ガンプラの歴史ページ専用CSS (history.css)
+   ========================================= */
+
+/* 🌟このページ特有の全体設定🌟 */
+/* ※共通の背景指定がapplication.cssにある場合は、heightとoverflowだけ残してください */
+body {
+  /* 1画面に収めるための設定（画面の高さを超えないようにする） */
+  
+}
+
+/* 🌟メインコンテンツのコンテナ🌟 */
+.history-container {
+  width: 95%;          
+  max-width: 1400px; /* PC向けに幅を広く取る */
+  height: calc(100vh ); /* ヘッダーと余白の分を引いて、画面にピタッと収める */
+  margin: 100px auto 20px; 
+  padding: 30px 40px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  clip-path: polygon(20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ページタイトル */
+.page-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #ffffff;
+  border-bottom: 2px solid #ffcc00;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  letter-spacing: 3px;
+  display: flex;
+  align-items: flex-end;
+  gap: 15px;
+  flex-shrink: 0; /* 縮まないようにする */
+}
+.page-title span { 
+  font-size: 16px; 
+  color: #aaaaaa; 
+  font-weight: normal; 
+  letter-spacing: 1px; 
+  margin-bottom: 4px; 
+}
+
+/* =========================================
+   🌟1画面に収まる横向きタイムライン🌟
+   ========================================= */
+.timeline-wrapper {
+  flex: 1; /* 残りの高さをすべて使い切る */
+  width: 100%;
+  display: flex;
+  align-items: center; /* 縦の中央に配置 */
+  position: relative;
+  padding: 0 20px;
+}
+
+.timeline {
+  display: flex;
+  justify-content: space-between; /* 均等に横に並べる */
+  width: 100%;
+  position: relative;
+  height: 100%; /* コンテナの高さいっぱいに広げる */
+}
+
+/* 中央の軸線 */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ffcc00;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+/* 各年代ブロック */
+.timeline-item {
+  flex: 1; /* 幅を均等に割り振る */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 中身を縦方向の中央に */
+}
+
+
+
+
+/* 🌟上配置（top）の調整🌟 */
+.timeline-item.top .content {
+  margin-bottom: auto; /* 上に寄せる */
+  padding-bottom: 20px; 
+}
+
+
+
+
+/* 🌟下配置（bottom）の調整🌟 */
+.timeline-item.bottom .content {
+  margin-top: auto; /* 下に寄せる */
+  padding-top: 20px; 
+}
+
+/* 🌟中身のデザイン🌟 */
+.year-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 5px 0;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+
+.year-title span {
+  display: block; font-size: 11px; color: #aaaaaa; font-weight: normal; margin-top: 2px;
+}
+
+.history-text {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #cccccc;
+  margin: 10px 0;
+  text-align: left;
+  /* 長すぎる文字は「...」で省略する魔法 */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* 3行まで表示 */
+  overflow: hidden;
+}
+
+/* 画像のプレースホルダー（横長） */
+.history-image-placeholder {
+  width: 100%;
+  height: 130px; /* 1画面に収めるために高さを抑える */
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+  display: flex; justify-content: center; align-items: center;
+  color: #888888; font-size: 11px; letter-spacing: 1px;
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+}

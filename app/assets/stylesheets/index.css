@@ -18,20 +18,6 @@ body {
   /* overflow-x: hidden; は削除してOKです！ */
 }
 
-#first-block {
- background-image: url("/assets/RX-78-2_homepage.jpg");
-  background-size: cover;
-  width: 125%;
-  height: 800px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  
-  background-color: rgba(0, 0, 0, 0.7); /* 黒色の半透明フィルター */
-  background-blend-mode: overlay;       /* 画像とフィルターを重ねる魔法 */
-  position: relative;
-}
 
 /* --- ロード画面 --- */
 #loading-screen {
@@ -54,9 +40,31 @@ body {
 .header-nav a { color: #ffffff; text-decoration: none; font-size: 14px; font-weight: bold; transition: color 0.3s; }
 .header-nav a:hover { color: #ffcc00; }
 
+
+#first-block {
+ background-image: url("/assets/RX-78-2_homepage.jpg");
+  background-size: cover;
+  width: 125%;
+  height: 800px;
+  align-items: center;
+ background-color: rgba(0, 0, 0, 0.7); /* 黒色の半透明フィルター */
+  background-blend-mode: overlay;       /* 画像とフィルターを重ねる魔法 */
+  position: relative;
+}
+
 /* --- メッセージ --- */
+.left-content {
+  position: absolute; 
+  top: 10px;         
+  left: 5px;
+  z-index: 10;
+  display: flex;             /* 中身を並べる魔法 */
+  flex-direction: column;    /* 縦に並べる */
+  gap: 80px;                 /* 👈 文章とボタン群の間の距離はここで調整できます！ */
+}
+
 .message-content {
-  position: absolute; /* 画面全体を基準にして配置する魔法 */
+  position: relative; 
   top: 65px;         /* ヘッダーの高さ(80px) + 少しの隙間(40px) */
   left: 30px;         /* 左からの距離 */
   color: #ffffff; 
@@ -76,9 +84,31 @@ body {
 }
 
 /* --- メインコンテンツ（リンク集） --- */
-.main-content { padding-top: 100px; padding-left: 50px; padding-right: 50px; }
-.content-section { margin-top: 30px; }
+.main-content { display: flex;
+  flex-direction: column; /*コンテナの縦揃え/
+  align-items: flex-start; /* 👇ボタンを左揃えにする👇 */
+  gap: 30px;
+  margin-left: 60px;}
+
+.content-section { margin-top: 0px; }
 .section-title { font-size: 14px; color: #aaaaaa; margin-bottom: 5px; }
-.link { color: #66b3ff; text-decoration: none; font-size: 18px; }
-.link:hover { text-decoration: underline; }
-  /* --- コピーするのはここまで --- */
+.link { color: #333333;               /* 文字を黒っぽくする */
+  font-size: 20px; 
+  font-weight: bold; 
+  text-decoration: none;
+  padding: 15px 40px; 
+  background-color: #ffffff;    /* 背景を白にする */
+  transition: all 0.3s; 
+  width: 250px; 
+  text-align: center; 
+  display: block;
+  
+  /* 👇左上と右下の角を斜めに切り取る魔法👇 */
+  clip-path: polygon(15px 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0 15px); }
+
+.link:hover {
+  background-color: #ffcc00;  /* ホバー時はガンダムイエローに */
+  color: #111111; 
+ }
+
+
