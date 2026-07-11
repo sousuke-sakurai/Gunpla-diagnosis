@@ -1,0 +1,84 @@
+
+/* --- リセットと全体設定（画面にピッタリ収納する強力な魔法） --- */
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; /* 余白（padding）を含めてサイズを計算させる */
+  max-width: 100%;        /* どんな要素も、絶対に画面幅(100%)を超えさせない */
+}
+
+ul, li { 
+  list-style: none; 
+}
+
+body {
+  background-color: #111111;
+  color: #ffffff;
+  font-family: 'Helvetica Neue', Arial, 'Hiragino Sans', sans-serif;
+  /* overflow-x: hidden; は削除してOKです！ */
+}
+
+#first-block {
+ background-image: url("/assets/RX-78-2_homepage.jpg");
+  background-size: cover;
+  width: 125%;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  
+  background-color: rgba(0, 0, 0, 0.7); /* 黒色の半透明フィルター */
+  background-blend-mode: overlay;       /* 画像とフィルターを重ねる魔法 */
+  position: relative;
+}
+
+/* --- ロード画面 --- */
+#loading-screen {
+  position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+  background-color: #ffffff;
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+  z-index: 9999; transition: opacity 0.5s ease;
+}
+#loading-screen.loaded { opacity: 0; pointer-events: none; }
+.loading-text { font-family: 'Impact', sans-serif; font-size: 24px; color: #333; letter-spacing: 2px; margin-top: 20px;}
+
+/* --- ヘッダー --- */
+.custom-header {
+  background-color: rgba(0, 0, 0, 0.9); width: 100%; height: 80px;
+  display: flex; justify-content: space-between; align-items: center; padding: 0 50px; box-sizing: border-box;
+  position: fixed; top: 0; left: 0; z-index: 1000; border-bottom: 1px solid #333;
+}
+.header-logo a { color: #ffffff; text-decoration: none; font-size: 24px; font-weight: bold; }
+.header-nav ul { display: flex; gap: 40px; }
+.header-nav a { color: #ffffff; text-decoration: none; font-size: 14px; font-weight: bold; transition: color 0.3s; }
+.header-nav a:hover { color: #ffcc00; }
+
+/* --- メッセージ --- */
+.message-content {
+  position: absolute; /* 画面全体を基準にして配置する魔法 */
+  top: 65px;         /* ヘッダーの高さ(80px) + 少しの隙間(40px) */
+  left: 30px;         /* 左からの距離 */
+  color: #ffffff; 
+  z-index: 10;        /* 背景画像より手前に出す */    
+}
+
+.main-copy {font-size: 70px;
+  font-weight: bold;
+  margin: 0 0 15px 0;  /* 下に15pxの隙間をあける */
+  letter-spacing: 2px;}
+
+.mini-copy{
+  font-size: 20px;
+  line-height: 1.8;    /* 行間を広げて読みやすくする */
+  font-weight: normal; /* 太字を解除 */
+  color: #e0e0e0;      /* 真っ白ではなく少しだけグレーにして、大見出しを目立たせる */
+}
+
+/* --- メインコンテンツ（リンク集） --- */
+.main-content { padding-top: 100px; padding-left: 50px; padding-right: 50px; }
+.content-section { margin-top: 30px; }
+.section-title { font-size: 14px; color: #aaaaaa; margin-bottom: 5px; }
+.link { color: #66b3ff; text-decoration: none; font-size: 18px; }
+.link:hover { text-decoration: underline; }
+  /* --- コピーするのはここまで --- */
